@@ -14,3 +14,24 @@
 .section-separator {
     margin: 25px 0;
 }
+
+.school-and-year {
+    display: flex;
+    justify-content: space-between;
+    align-items: first baseline;
+    gap: 2rem;
+}
+
+.school-and-year h3 {
+    margin-left: 25px;
+}
+
+.school-and-year h4 {
+    margin-right: 25px;
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.education-experience-preview h4{
+    margin-left: 25px;
+    color: rgba(255, 255, 255, 0.8)
+}
