@@ -1,0 +1,12 @@
+.general-information-preview {
+    font-size: 1.2rem;
+}
+
+.general-information-preview h1 {
+    text-align: center;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-evenly;
+}
