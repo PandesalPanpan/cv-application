@@ -43,3 +43,7 @@
 .job-responsibilities {
     margin-left: 15px;
 }
+
+.education-experience-preview li {
+    list-style: none;
+}
