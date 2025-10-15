@@ -1,18 +1,21 @@
 export default function EducationalExperiencePreview({
-    children,
-    school,
-    study,
-    date
+    studies
 }) {
 
     return (
         <section className="education-experience-preview">
             <h2>Education Experience</h2>
-            <div className="school-and-year">
-                <h3>{school}</h3>
-                <h4>{date}</h4>
-            </div>
-            <h4>{study}</h4>
+            {studies.map((study) => {
+                return (
+                    <li key={study.school + study.date + study.course}>
+                        <div className="school-and-year">
+                            <h3>{study.school}</h3>
+                            <h4>{study.date}</h4>
+                        </div>
+                        <h4>{study.course}</h4>
+                    </li>
+                )
+            })}
         </section>
     )
 }
