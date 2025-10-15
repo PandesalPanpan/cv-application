@@ -10,3 +10,7 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+.section-separator {
+    margin: 25px 0;
+}
