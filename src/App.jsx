@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import GeneralInformation from './components/GeneralInformation'
+import GeneralForm from './components/GeneralForm'
 import CVPreview from './components/CVPreview'
 import './App.css'
+import CVFormEditor from './components/CVFormEditor'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="container">
-      <GeneralInformation></GeneralInformation>
+      <CVFormEditor></CVFormEditor>
       <CVPreview></CVPreview>
     </div>
   )
