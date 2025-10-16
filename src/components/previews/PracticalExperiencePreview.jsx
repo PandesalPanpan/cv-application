@@ -6,7 +6,7 @@ export default function PracticalExperiencePreview({
         <section className="practical-experience-preview">
             {jobs.map((job) => {
                 return (
-                    <>
+                    <li key={job.company+job.date+job.position}>
                         <div className="company-information">
                             <div className="company-and-year">
                                 <h3>{job.company}</h3>
@@ -15,9 +15,9 @@ export default function PracticalExperiencePreview({
                             <h4>{job.position}</h4>
                         </div>
                         <ul className="job-responsibilities">
-                            {job.responsibilities.map((responsibility) => <li>{responsibility}</li>)}
+                            {job.responsibilities.map((responsibility) => <li key={responsibility}>{responsibility}</li>)}
                         </ul>
-                    </>
+                    </li>
                 )
             })}
         </section>
