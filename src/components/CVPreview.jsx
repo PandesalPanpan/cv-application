@@ -43,15 +43,17 @@ const educations = [
     }
 ]
 
-export default function CVPreview() {
+export default function CVPreview({
+    generals
+}) {
 
     return (
         <div className="cv-preview">
             <GeneralInformationPreview
-                name={person.name}
-                github={person.github}
-                gmail={person.gmail}
-                number={person.number}
+                name={generals.name}
+                github={generals.github}
+                email={generals.email}
+                phone={generals.phone}
             />
             <hr className="section-separator" />
             <EducationalExperiencePreview
