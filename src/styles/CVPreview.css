@@ -48,6 +48,12 @@
     margin-left: 15px;
 }
 
-.education-experience-preview li {
+.education-experience-preview li,
+.practical-experience-preview .job-list
+{
     list-style: none;
+}
+
+.job-list {
+    font-size: 1.1rem;
 }
