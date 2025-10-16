@@ -8,7 +8,10 @@ export default function PracticalExperiencePreview({
                 return (
                     <>
                         <div className="company-information">
-                            <h3>{job.company}</h3>
+                            <div className="company-and-year">
+                                <h3>{job.company}</h3>
+                                <h4>{job.date}</h4>
+                            </div>
                             <h4>{job.position}</h4>
                         </div>
                         <ul className="job-responsibilities">

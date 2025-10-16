@@ -15,7 +15,9 @@
     margin: 25px 0;
 }
 
-.school-and-year {
+.school-and-year,
+.company-and-year
+{
     display: flex;
     justify-content: space-between;
     align-items: first baseline;
@@ -26,12 +28,14 @@
     margin-left: 25px;
 }
 
-.school-and-year h4 {
+.school-and-year h4,
+.company-information h4
+{
     margin-right: 25px;
     color: rgba(255, 255, 255, 0.7)
 }
 
-.education-experience-preview h4{
+.education-experience-preview h4 {
     margin-left: 25px;
     color: rgba(255, 255, 255, 0.8)
 }
