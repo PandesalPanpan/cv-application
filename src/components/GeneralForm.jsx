@@ -3,7 +3,9 @@ export default function GeneralForm({
 }) {
 
     return (
-        <form onSubmit={handleGeneralSave}>
+        <form onSubmit={(e) => {
+            handleGeneralSave(e ,"general")
+        }}>
             <label htmlFor="name">Name:
                 <input type="text" name="name" id="name" />
             </label>
