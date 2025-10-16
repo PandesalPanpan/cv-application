@@ -1,12 +1,12 @@
 import GeneralForm from "./GeneralForm";
 
 export default function CVFormEditor({
-    handleGeneralSave
+    handleGeneralSave: handleSectionSave
 }) {
     return (
         <div className="cv-form-container">
             <section className="general-information-section">
-                <GeneralForm handleGeneralSave={handleGeneralSave}></GeneralForm>
+                <GeneralForm handleSectionSave={handleSectionSave}></GeneralForm>
             </section>
             <section className="educational-experience-section">
 

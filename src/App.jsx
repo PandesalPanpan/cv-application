@@ -9,17 +9,32 @@ function App() {
   const [educations, setEducations] = useState(sampleEducations);
   const [companies, setCompanies] = useState(sampleCompanies);
 
-  const handleGeneralSave = (event) => {
+  const handleSectionSave = (event, section) => {
     event.preventDefault();
+
+    console.log(`Section: ${section}`);
     const fd = new FormData(event.currentTarget);
     const data = Object.fromEntries(fd);
-    setGeneral({ ...data })
+
+    switch(section) {
+      case 'general': 
+        setGeneral((prev) => ({...prev, ...data}));
+        break;
+      case 'education':
+        setEducations((prev) => ({...prev, ...data}));
+        break;
+      case 'experience':
+        setCompanies((prev) => ({...prev, ...data}));
+        break;
+      default:
+        break;
+      }
   }
 
   return (
     <div className="container">
       <CVFormEditor
-        handleGeneralSave={handleGeneralSave}
+        handleSectionSave={handleSectionSave}
       />
       <CVPreview
         generals={general}
