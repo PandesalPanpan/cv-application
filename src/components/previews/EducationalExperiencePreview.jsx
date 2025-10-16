@@ -5,7 +5,7 @@ export default function EducationalExperiencePreview({
     return (
         <section className="education-experience-preview">
             <h2>Education Experience</h2>
-            {studies.map((study) => {
+            {studies ? studies.map((study) => {
                 return (
                     <li key={study.school + study.date + study.course}>
                         <div className="school-and-year">
@@ -15,7 +15,7 @@ export default function EducationalExperiencePreview({
                         <h4>{study.course}</h4>
                     </li>
                 )
-            })}
+            }) : <h3>Where's the money lebowski</h3>}
         </section>
     )
 }

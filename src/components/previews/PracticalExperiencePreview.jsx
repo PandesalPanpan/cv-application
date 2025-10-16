@@ -1,12 +1,12 @@
 export default function PracticalExperiencePreview({
-    jobs
+    companies
 }) {
 
     return (
         <section className="practical-experience-preview">
-            {jobs.map((job) => {
+            {companies ? companies.map((job) => {
                 return (
-                    <li key={job.company+job.date+job.position}>
+                    <li key={job.company+job.date+job.position} className="job-list">
                         <div className="company-information">
                             <div className="company-and-year">
                                 <h3>{job.company}</h3>
@@ -19,7 +19,7 @@ export default function PracticalExperiencePreview({
                         </ul>
                     </li>
                 )
-            })}
+            }): <h3>It's down there somewhere</h3>}
         </section>
     )
 }
