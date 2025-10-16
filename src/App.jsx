@@ -7,9 +7,19 @@ import { sampleGeneralInformation } from './data-util'
 function App() {
   const [general, setGeneral] = useState(sampleGeneralInformation);
 
+  const handleGeneralSave = (event) => {
+    event.preventDefault();
+    const fd = new FormData(event.currentTarget);
+    const data = Object.fromEntries(fd);
+    setGeneral({...data})
+  }
+
   return (
     <div className="container">
-      <CVFormEditor></CVFormEditor>
+      <CVFormEditor
+      handleGeneralSave={handleGeneralSave}
+      
+      ></CVFormEditor>
       <CVPreview generals={general}></CVPreview>
     </div>
   )

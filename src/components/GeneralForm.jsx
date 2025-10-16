@@ -1,14 +1,9 @@
-export default function GeneralForm() {
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const fd = new FormData(event.currentTarget);
-        const data = Object.fromEntries(fd);
-        console.log(data);
-    }
+export default function GeneralForm({
+    handleGeneralSave
+}) {
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleGeneralSave}>
             <label htmlFor="name">Name:
                 <input type="text" name="name" id="name" />
             </label>
@@ -21,6 +16,7 @@ export default function GeneralForm() {
             <label htmlFor="github">GitHub:
                 <input type="text" name="github" id="github"/>
             </label>
+            <button type="submit">Save</button>
         </form>
     )
 }
