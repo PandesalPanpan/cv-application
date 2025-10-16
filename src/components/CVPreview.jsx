@@ -10,41 +10,10 @@ const person = {
     number: "(63+) 912 345 6789"
 }
 
-const companies = [
-    {
-        company: "Ntek Systems Inc",
-        position: "PHP Developer",
-        date: "Sept 2023 - Oct 2023",
-        responsibilities: [
-            "Create a reporting system",
-            "API Integration"
-        ]
-    },
-    {
-        company: "Mash Garage",
-        position: "Software Developer",
-        date: "2025 - Present",
-        responsibilities: [
-            "Inventory Management System"
-        ]
-    }
-]
-
-const educations = [
-    {
-        school: "Polytechnic University of the Philippines",
-        date: "2024-2027",
-        course: "Bachelors of Computer Engineering"
-    },
-    {
-        school: "Institute of Technology",
-        date: "2021-2024",
-        course: "Diploma in Computer Engineering Technology"
-    }
-]
-
 export default function CVPreview({
-    generals
+    generals,
+    educations,
+    companies
 }) {
 
     return (
@@ -61,7 +30,7 @@ export default function CVPreview({
             />
             <hr className="section-separator" />
             <PracticalExperiencePreview
-                jobs={companies}
+                companies={companies}
             >
             </PracticalExperiencePreview>
         </div>

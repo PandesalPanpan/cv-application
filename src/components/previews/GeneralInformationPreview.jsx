@@ -11,7 +11,7 @@ export default function GeneralInformationPreview({
             <div className="contact-details">
                 <p>{email}</p>
                 <p>{phone}</p>
-                <a href={"https://"+github} target="_blank">{github}</a>
+                <a href={"https://github.com/"+github} target="_blank">{"github.com/"+github}</a>
             </div>
         </section>
     )
