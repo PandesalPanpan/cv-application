@@ -6,18 +6,26 @@ export default function GeneralForm({
         <form onSubmit={(e) => {
             handleSectionSave(e ,"general")
         }}>
-            <label htmlFor="name">Name:
-                <input type="text" name="name" id="name" />
-            </label>
-            <label htmlFor="email">Email:
-                <input type="email" name="email" id="email" />
-            </label>
-            <label htmlFor="phone">Phone:
-                <input type="tel" name="phone" id="phone" />
-            </label>
-            <label htmlFor="github">GitHub:
-                <input type="text" name="github" id="github"/>
-            </label>
+            <div className="form-row">
+                <label htmlFor="name">Name:
+                    <input type="text" name="name" id="name" />
+                </label>
+            </div>
+            <div className="form-row">
+                <label htmlFor="email">Email:
+                    <input type="email" name="email" id="email" />
+                </label>
+            </div>
+            <div className="form-row">
+                <label htmlFor="phone">Phone:
+                    <input type="tel" name="phone" id="phone" />
+                </label>
+            </div>
+            <div className="form-row">
+                <label htmlFor="github">GitHub:
+                    <input type="text" name="github" id="github"/>
+                </label>
+            </div>
             <button type="submit">Save</button>
         </form>
     )
