@@ -22,15 +22,15 @@ export default function ExperienceForm({
                     <input type="hidden" name="id" value={entry.id} />
                     <div className="company-item">
                         <div className="company-details">
-                            <label htmlFor={`company-${index}`}>Company:
+                            <label htmlFor={`company-${index}`}>Company:<span className="required">*</span>
                             </label>
-                            <input id={`company-${index}`} type="text" name={`company`} value={entry.company} onChange={(e) => updateEntry(index, 'company', e.target.value)} />
-                            <label htmlFor={`position-${index}`}>Position:
+                            <input requried id={`company-${index}`} type="text" name={`company`} value={entry.company} onChange={(e) => updateEntry(index, 'company', e.target.value)} />
+                            <label htmlFor={`position-${index}`}>Position:<span className="required">*</span>
                             </label>
-                            <input id={`position-${index}`} type="text" name={`position`} value={entry.position} onChange={(e) => updateEntry(index, 'position', e.target.value)} />
-                            <label htmlFor={`date-${index}`}>Date:
+                            <input requried id={`position-${index}`} type="text" name={`position`} value={entry.position} onChange={(e) => updateEntry(index, 'position', e.target.value)} />
+                            <label htmlFor={`date-${index}`}>Date:<span className="required">*</span>
                             </label>
-                            <input id={`date-${index}`} type="text" name={`date`} onChange={(e) => updateEntry(index, 'date', e.target.value)} />
+                            <input requried id={`date-${index}`} type="text" name={`date`} onChange={(e) => updateEntry(index, 'date', e.target.value)} />
                         </div>
                         <div className="responbilities-group">
                             <label htmlFor={`responsibility-1-${index}`}>Responbility:

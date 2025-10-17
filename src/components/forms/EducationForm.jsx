@@ -21,14 +21,14 @@ export default function EducationForm({
                 return <div key={entry.id} className="education-row">
                     <input type="hidden" name="id" value={entry.id}/>
                     <div className="education-item">
-                        <label htmlFor={`school-${index}`}>School:
-                            <input id={`school-${index}`} type="text" name={`school`} value={entry.school} onChange={(e) => updateEntry(index, 'school', e.target.value)}/>
+                        <label htmlFor={`school-${index}`}>School:<span className="required">*</span>
+                            <input required id={`school-${index}`} type="text" name={`school`} value={entry.school} onChange={(e) => updateEntry(index, 'school', e.target.value)}/>
                         </label>
-                        <label htmlFor={`date-${index}`}>Date:
-                            <input id={`date-${index}`} type="text" name={`date`} onChange={(e) => updateEntry(index, 'date', e.target.value)}/>
+                        <label htmlFor={`date-${index}`}>Date:<span className="required">*</span>
+                            <input required id={`date-${index}`} type="text" name={`date`} onChange={(e) => updateEntry(index, 'date', e.target.value)}/>
                         </label>
-                        <label htmlFor={`course-${index}`}>Course:
-                            <input id={`course-${index}`} type="text" name={`course`}  onChange={(e) => updateEntry(index, 'course', e.target.value)}/>
+                        <label htmlFor={`course-${index}`}>Course:<span className="required">*</span>
+                            <input required id={`course-${index}`} type="text" name={`course`}  onChange={(e) => updateEntry(index, 'course', e.target.value)}/>
                         </label>
                         <button type="button" onClick={() => removeEntry(index)}>Remove</button>
                     </div>
