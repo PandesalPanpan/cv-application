@@ -20,16 +20,18 @@ export default function EducationForm({
             {entries.map((entry, index) => {
                 return <div key={entry.id} className="education-row">
                     <input type="hidden" name="id" value={entry.id}/>
-                    <label htmlFor={`school-${index}`}>School:
-                        <input id={`school-${index}`} type="text" name={`school`} value={entry.school} onChange={(e) => updateEntry(index, 'school', e.target.value)}/>
-                    </label>
-                    <label htmlFor={`date-${index}`}>Date:
-                        <input id={`date-${index}`} type="text" name={`date`} onChange={(e) => updateEntry(index, 'date', e.target.value)}/>
-                    </label>
-                    <label htmlFor={`course-${index}`}>Course:
-                        <input id={`course-${index}`} type="text" name={`course`}  onChange={(e) => updateEntry(index, 'course', e.target.value)}/>
-                    </label>
-                    <button type="button" onClick={() => removeEntry(index)}>Remove Entry</button>
+                    <div className="education-item">
+                        <label htmlFor={`school-${index}`}>School:
+                            <input id={`school-${index}`} type="text" name={`school`} value={entry.school} onChange={(e) => updateEntry(index, 'school', e.target.value)}/>
+                        </label>
+                        <label htmlFor={`date-${index}`}>Date:
+                            <input id={`date-${index}`} type="text" name={`date`} onChange={(e) => updateEntry(index, 'date', e.target.value)}/>
+                        </label>
+                        <label htmlFor={`course-${index}`}>Course:
+                            <input id={`course-${index}`} type="text" name={`course`}  onChange={(e) => updateEntry(index, 'course', e.target.value)}/>
+                        </label>
+                        <button type="button" onClick={() => removeEntry(index)}>Remove</button>
+                    </div>
                 </div>
             })}
 

@@ -98,3 +98,25 @@ h6 {
 .general-information-section form input {
   width: 450px;
 }
+
+.educational-experience-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.education-item input {
+  width: 300px;
+}
+
+.education-item button {
+  margin: 0 auto;
+  font-size: 0.6rem;
+  height: 30px;
+  width: 120px;
+}
