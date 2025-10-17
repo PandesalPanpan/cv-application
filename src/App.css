@@ -82,6 +82,13 @@ h6 {
   grid-template-columns: repeat(2, 1fr);
 }
 
+label .required {
+  content: " *";
+  color: red;
+  margin-left: 0.25rem;
+  font-weight: 600;
+}
+
 .general-information-section form {
   display: flex;
   flex-direction: column;
