@@ -2,7 +2,7 @@ import { useState } from "react";
 export default function ExperienceForm({
     handleSectionSave
 }) {
-    const experienceObject = {id: crypto.randomUUID(), company: "", date: "", responsibilities: "" };
+    const experienceObject = { id: crypto.randomUUID(), company: "", date: "", responsibilities: "" };
     const [entries, setEntries] = useState([experienceObject])
 
     const updateEntry = (index, field, value) => {
@@ -19,25 +19,31 @@ export default function ExperienceForm({
         }}>
             {entries.map((entry, index) => {
                 return <div key={entry.id} className="experience-row">
-                    <input type="hidden" name="id" value={entry.id}/>
-                    <label htmlFor={`company-${index}`}>company:
-                        <input id={`company-${index}`} type="text" name={`company`} value={entry.company} onChange={(e) => updateEntry(index, 'company', e.target.value)}/>
-                    </label>
-                    <label htmlFor={`position-${index}`}>Position:
-                        <input id={`position-${index}`} type="text" name={`position`} value={entry.position} onChange={(e) => updateEntry(index, 'position', e.target.value)}/>
-                    </label>
-                    <label htmlFor={`date-${index}`}>Date:
-                        <input id={`date-${index}`} type="text" name={`date`} onChange={(e) => updateEntry(index, 'date', e.target.value)}/>
-                    </label>
-                <label htmlFor={`responsibility-1-${index}`}>Responbility:
-                        <input id={`responsibility-1-${index}`} type="text" name={`responsibility-1`}  onChange={(e) => updateEntry(index, 'responsibility-1', e.target.value)}/>
-                    </label>
-                    <label htmlFor={`responsibility-2-${index}`}>Responbility:
-                        <input id={`responsibility-2-${index}`} type="text" name={`responsibility-2`}  onChange={(e) => updateEntry(index, 'responsibility-2', e.target.value)}/>
-                    </label>
-                    <label htmlFor={`responsibility-3-${index}`}>Responbility:
-                        <input id={`responsibility-3-${index}`} type="text" name={`responsibility-3`}  onChange={(e) => updateEntry(index, 'responsibility-3', e.target.value)}/>
-                    </label>
+                    <input type="hidden" name="id" value={entry.id} />
+                    <div className="company-item">
+                        <div className="company-details">
+                            <label htmlFor={`company-${index}`}>Company:
+                            </label>
+                            <input id={`company-${index}`} type="text" name={`company`} value={entry.company} onChange={(e) => updateEntry(index, 'company', e.target.value)} />
+                            <label htmlFor={`position-${index}`}>Position:
+                            </label>
+                            <input id={`position-${index}`} type="text" name={`position`} value={entry.position} onChange={(e) => updateEntry(index, 'position', e.target.value)} />
+                            <label htmlFor={`date-${index}`}>Date:
+                            </label>
+                            <input id={`date-${index}`} type="text" name={`date`} onChange={(e) => updateEntry(index, 'date', e.target.value)} />
+                        </div>
+                        <div className="responbilities-group">
+                            <label htmlFor={`responsibility-1-${index}`}>Responbility:
+                            </label>
+                            <input id={`responsibility-1-${index}`} type="text" name={`responsibility-1`} onChange={(e) => updateEntry(index, 'responsibility-1', e.target.value)} />
+                            <label htmlFor={`responsibility-2-${index}`}>Responbility:
+                            </label>
+                            <input id={`responsibility-2-${index}`} type="text" name={`responsibility-2`} onChange={(e) => updateEntry(index, 'responsibility-2', e.target.value)} />
+                            <label htmlFor={`responsibility-3-${index}`}>Responbility:
+                            </label>
+                            <input id={`responsibility-3-${index}`} type="text" name={`responsibility-3`} onChange={(e) => updateEntry(index, 'responsibility-3', e.target.value)} />
+                        </div>
+                    </div>
                     <button type="button" onClick={() => removeEntry(index)}>Remove Entry</button>
                 </div>
             })}
