@@ -1,6 +1,6 @@
 import GeneralForm from "./forms/GeneralForm";
 import EducationForm from "./forms/EducationForm";
-
+import ExperienceForm from "./forms/ExperienceForm";
 export default function CVFormEditor({
     handleSectionSave
 }) {
@@ -15,7 +15,7 @@ export default function CVFormEditor({
             </section>
             <hr className="section-separator" />
             <section className="practical-experience-section">
-
+                <ExperienceForm handleSectionSave={handleSectionSave}/>
             </section>
 
         </div>

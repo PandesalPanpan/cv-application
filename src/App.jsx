@@ -14,7 +14,7 @@ function App() {
     const fd = new FormData(event.currentTarget);
     const data = Object.fromEntries(fd);
     switch (section) {
-      case 'general': 
+      case 'general':
         setGeneral((prev) => ({ ...prev, ...data }));
         break;
       case 'education':
@@ -32,11 +32,26 @@ function App() {
         setEducations(schoolItems);
         break;
       case 'experience':
-        setCompanies((prev) => ({...prev, ...data}));
+        const experienceIds = fd.getAll('id');
+        const companies = fd.getAll('company');
+        const companyPosition = fd.getAll('position');
+        const companyDates = fd.getAll('date');
+        const responsibilityOne = fd.getAll('responsibility-1');
+        const responsibilityTwo = fd.getAll('responsibility-2');
+        const responsibilityThree = fd.getAll('responsibility-3');
+        const companyItems = experienceIds.map((experienceId, index) => ({
+          id: experienceId,
+          company: companies[index],
+          date: companyDates[index],
+          position: companyPosition[index],
+          responsibilities: [responsibilityOne[index], responsibilityTwo[index], responsibilityThree[index]],
+        }))
+        debugger;
+        setCompanies(companyItems);
         break;
       default:
         break;
-      }
+    }
   }
 
   return (
