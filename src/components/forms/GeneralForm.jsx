@@ -1,10 +1,10 @@
 export default function GeneralForm({
-    handleGeneralSave
+    handleSectionSave
 }) {
 
     return (
         <form onSubmit={(e) => {
-            handleGeneralSave(e ,"general")
+            handleSectionSave(e ,"general")
         }}>
             <label htmlFor="name">Name:
                 <input type="text" name="name" id="name" />
