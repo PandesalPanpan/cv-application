@@ -11,17 +11,25 @@ function App() {
 
   const handleSectionSave = (event, section) => {
     event.preventDefault();
-
-    console.log(`Section: ${section}`);
     const fd = new FormData(event.currentTarget);
     const data = Object.fromEntries(fd);
-
-    switch(section) {
+    switch (section) {
       case 'general': 
-        setGeneral((prev) => ({...prev, ...data}));
+        setGeneral((prev) => ({ ...prev, ...data }));
         break;
       case 'education':
-        setEducations((prev) => ({...prev, ...data}));
+        const schoolids = fd.getAll('id');
+        const schools = fd.getAll('school');
+        const schoolDates = fd.getAll('date');
+        const courses = fd.getAll('course');
+        const schoolItems = schoolids.map((schoolid, index) => ({
+          id: schoolid,
+          school: schools[index],
+          date: schoolDates[index],
+          course: courses[index]
+        }))
+
+        setEducations(schoolItems);
         break;
       case 'experience':
         setCompanies((prev) => ({...prev, ...data}));
