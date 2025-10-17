@@ -7,7 +7,7 @@ export default function EducationalExperiencePreview({
             <h2>Education Experience</h2>
             {studies ? studies.map((study) => {
                 return (
-                    <li key={study.school + study.date + study.course}>
+                    <li key={study.id}>
                         <div className="school-and-year">
                             <h3>{study.school}</h3>
                             <h4>{study.date}</h4>

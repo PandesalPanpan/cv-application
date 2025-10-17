@@ -7,11 +7,13 @@ export const sampleGeneralInformation = {
 
 export const sampleEducations = [
     {
+        id: crypto.randomUUID(),
         school: "Polytechnic University of the Philippines",
         date: "2024-2027",
         course: "Bachelor's in Computer Engineering" 
     },
     {
+        id: crypto.randomUUID(),
         school: "Insitute of Technology",
         date: "2019-2021",
         course: "Diploma in Computer Engineering Technology"
